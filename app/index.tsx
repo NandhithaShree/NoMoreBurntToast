@@ -1,4 +1,4 @@
-import { Text, View, Image, StyleSheet, TextInput, } from "react-native";  
+import { Text, View, Image, StyleSheet, TextInput, Button, TouchableOpacity, } from "react-native";  
 import * as Font from 'expo-font';
 
 export default function Index() {
@@ -6,7 +6,7 @@ export default function Index() {
     <View style = {styles.container}>
       <Login/>
       <DisplayIcon />
-      <LoginidInput />
+      <LoginButton /> 
     </View>
     
   );
@@ -31,7 +31,17 @@ const styles = StyleSheet.create({
     fontFamily: 'Cochin',
     paddingTop: 20,
     paddingLeft: 170,
-  }
+  },
+  button: {
+    backgroundColor: '#9e6168',
+    padding: 10,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    justifyContent: "center",
+  },
 });
 
 const Login = () => {
@@ -51,12 +61,13 @@ const DisplayIcon = () => {
   )
 }
 
+const LoginButton = () => {
+  return (
+    <View style={{width: 240, flex: 1, paddingLeft: 175,}}>
+      <TouchableOpacity style={styles.button} onPress={() => alert('Button Pressed')}>
+        <Text style={styles.buttonText}>Login</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
-const LoginidInput = () => {
-return(
-      <TextInput
-        style={{ height: 50, borderColor: 'gray', borderWidth: 1, paddingTop: 400,}}
-        placeholder="Enter Text Here"></TextInput>
-)
-
-}
