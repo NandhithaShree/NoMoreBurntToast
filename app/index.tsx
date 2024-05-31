@@ -1,6 +1,7 @@
 import { Text, View, Image, StyleSheet, TextInput, Button, TouchableOpacity, } from "react-native";  
 import * as Font from 'expo-font';
 import {useState} from "react";
+import { Link } from 'expo-router';
 
 export default function Index() {
   const [username, setusername] = useState(" username")
@@ -26,22 +27,21 @@ const styles = StyleSheet.create({
   tinyLogo: {
     width: 300,
     height: 250,
-    paddingLeft: 400,
+    paddingLeft: 370,
   },
   logintext: {
-    flex: 0,
-    width: 400,
     height: 40,
     fontSize: 15,
     fontFamily: 'Cochin',
     paddingTop: 20,
-    paddingLeft: 170,
+    paddingLeft: 160,
   },
   button: {
     backgroundColor: '#9e6168',
     padding: 10,
     borderRadius: 5,
     height: 40,
+
   },
   buttonText: {
     color: 'white',
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   orsignintext: {
     paddingTop: 50,
-    paddingLeft: 170,
+    paddingLeft: 175,
     paddingBottom: 400,
     textDecorationLine: 'underline'
   }
@@ -98,8 +98,8 @@ const LoginButton = () => {
 
 const Orsignin = () => {
   return(
-    <TouchableOpacity>
-      <Text style = {styles.orsignintext}> Or sign in </Text>
+    <TouchableOpacity >
+      <Link href="/screens/1" style = {styles.orsignintext}>Or sign in</Link>
     </TouchableOpacity>
       
   )
