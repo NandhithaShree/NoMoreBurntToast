@@ -57,8 +57,7 @@ export default function SigninPage() {
 
   const DisplayText = () => {
     return(
-      <Text>
-        Passwords do not match
+      <Text>                                 Passwords do not match
       </Text>
     )
   }
