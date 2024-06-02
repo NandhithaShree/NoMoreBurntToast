@@ -1,28 +1,46 @@
-import { Text, View, Image, StyleSheet, TextInput, Button, TouchableOpacity, } from "react-native";  
-import * as Font from 'expo-font';
-import {useState} from "react";
-import { Link } from 'expo-router';
+import {
+  Text,
+  View,
+  Image,
+  StyleSheet,
+  TextInput,
+  Button,
+  TouchableOpacity,
+} from "react-native";
+import * as Font from "expo-font";
+import { useState } from "react";
+import { Link } from "expo-router";
 
 export default function Index() {
-  const [username, setusername] = useState(" username")
-  const [password, setpassword] = useState(" password")
+  const [username, setusername] = useState("");
+  const [password, setpassword] = useState("");
   return (
-    <View style = {styles.container}>
-      <Login/>
+    <View style={styles.container}>
+      <Login />
       <DisplayIcon />
-      <TextInput style = {styles.input1} value={username} onChangeText={setusername} />
-      <TextInput style = {styles.input2} value = {password} onChangeText = {setpassword}/>
-      <LoginButton /> 
+      <TextInput
+        style={styles.input1}
+        value={username}
+        onChangeText={setusername}
+        placeholder="Username"
+      />
+      <TextInput
+        style={styles.input2}
+        value={password}
+        onChangeText={setpassword}
+        placeholder="Password"
+        secureTextEntry={true}
+      />
+      <LoginButton />
       <Orsignin />
     </View>
-    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     paddingTop: 0,
-    backgroundColor: '#fef2f3',
+    backgroundColor: "#fef2f3",
   },
   tinyLogo: {
     width: 300,
@@ -32,19 +50,18 @@ const styles = StyleSheet.create({
   logintext: {
     height: 40,
     fontSize: 15,
-    fontFamily: 'Cochin',
+    fontFamily: "Cochin",
     paddingTop: 20,
     paddingLeft: 160,
   },
   button: {
-    backgroundColor: '#9e6168',
+    backgroundColor: "#9e6168",
     padding: 10,
     borderRadius: 5,
     height: 40,
-
   },
   buttonText: {
-    color: 'white',
+    color: "white",
     fontSize: 16,
     justifyContent: "center",
   },
@@ -62,45 +79,44 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     paddingLeft: 175,
     paddingBottom: 400,
-    textDecorationLine: 'underline'
-  }
-
-
-
+    textDecorationLine: "underline",
+  },
 });
 
 const Login = () => {
-  return(
-      <Text style = {styles.logintext}> Please login</Text>
-  )
-}
+  return <Text style={styles.logintext}> Please login</Text>;
+};
 
 const DisplayIcon = () => {
-  return(
-    <View style  = {styles.container}>
+  return (
+    <View style={styles.container}>
       <Image
-        style = {styles.tinyLogo}
-        source={require('../assets/images/logoig.png')}
+        style={styles.tinyLogo}
+        source={require("../assets/images/logoig.png")}
       />
     </View>
-  )
-}
+  );
+};
 
 const LoginButton = () => {
   return (
-    <View style={{width: 240, flex: 1, paddingLeft: 175,}}>
-      <TouchableOpacity style={styles.button} onPress={() => alert('Button Pressed')}>
+    <View style={{ width: 240, flex: 1, paddingLeft: 175 }}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => alert("Button Pressed")}
+      >
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
     </View>
-  )
-}
+  );
+};
 
 const Orsignin = () => {
-  return(
-    <TouchableOpacity >
-      <Link href="/screens/1" style = {styles.orsignintext}>Or sign in</Link>
+  return (
+    <TouchableOpacity>
+      <Link href="/screens/signIn" style={styles.orsignintext}>
+        Or sign in
+      </Link>
     </TouchableOpacity>
-      
-  )
-}
+  );
+};
