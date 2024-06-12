@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "86778400542",
+    "project_id": "no-more-burnt-toast",
+    "storage_bucket": "no-more-burnt-toast.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86778400542:android:6cac214e20a025c9b7430f",
+        "android_client_info": {
+          "package_name": "nus.nmbt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86778400542-q74eb43sad0eifh6c1br5f14o9qt38ov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHakckKnr8oA21zULqM0CPUsnxSwN816g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86778400542-q74eb43sad0eifh6c1br5f14o9qt38ov.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "86778400542-ta98sougnloupvsicferkqgav4ndvklb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nus.nmbt"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
