@@ -1,0 +1,191 @@
+[
+  {
+    "step_main": 1,
+    "step_detailed": 1,
+    "img_filename": "1_Emptygasstove.png",
+    "command_type": "stove_switchheat",
+    "command_details": "medium",
+    "step_detailed_description": "Turn to medium heat",
+    "step_description": "Heat 2 tbsp oil on Medium flame. Saute garlic and green onion for 30s"
+  },
+  {
+    "step_main": 1,
+    "step_detailed": 2,
+    "img_filename": "2_medheat.png",
+    "command_type": "add_tool",
+    "command_details": "pan",
+    "step_detailed_description": "Bring out pan",
+    "step_description": "Heat 2 tbsp oil on Medium flame. Saute garlic and green onion for 30s"
+  },
+  {
+    "step_main": 1,
+    "step_detailed": 3,
+    "img_filename": "3_Gas_stove_pan_on_med_heat.png",
+    "command_type": "add_ingredient",
+    "command_details": "oil",
+    "step_detailed_description": "Add oil",
+    "step_description": "Heat 2 tbsp oil on Medium flame. Saute garlic and green onion for 30s"
+  },
+  {
+    "step_main": 1,
+    "step_detailed": 4,
+    "img_filename": "4_oil.png",
+    "command_type": "add_ingredient",
+    "command_details": "garlic",
+    "step_detailed_description": "Add garlic",
+    "step_description": "Heat 2 tbsp oil on Medium flame. Saute garlic and green onion for 30s"
+  },
+  {
+    "step_main": 1,
+    "step_detailed": 5,
+    "img_filename": "5_garlic.png",
+    "command_type": "add_ingredient",
+    "command_details": "spring_onion_white",
+    "step_detailed_description": "Add spring onions",
+    "step_description": "Heat 2 tbsp oil on Medium flame. Saute garlic and green onion for 30s"
+  },
+  {
+    "step_main": 1,
+    "step_detailed": 6,
+    "img_filename": "6_green_onion.png",
+    "command_type": "mix",
+    "command_details": "",
+    "step_detailed_description": "Saute for 30s!",
+    "step_description": "Heat 2 tbsp oil on Medium flame. Saute garlic and green onion for 30s"
+  },
+  {
+    "step_main": 2,
+    "step_detailed": 7,
+    "img_filename": "7_after_mix.png",
+    "command_type": "stove_switchheat",
+    "command_details": "low",
+    "step_detailed_description": "Reduce flame to low",
+    "step_description": "Reduce flame to low, saute red chillies for 30s"
+  },
+  {
+    "step_main": 2,
+    "step_detailed": 8,
+    "img_filename": "8_reduce_flame_ to_low.png",
+    "command_type": "add_ingredient",
+    "command_details": "chili",
+    "step_detailed_description": "Add chili",
+    "step_description": "Reduce flame to low, saute red chillies for 30s"
+  },
+  {
+    "step_main": 2,
+    "step_detailed": 9,
+    "img_filename": "9_addchilli.png",
+    "command_type": "mix",
+    "command_details": "",
+    "step_detailed_description": "Saute for 30s!",
+    "step_description": "Reduce flame to low, saute red chillies for 30s"
+  },
+  {
+    "step_main": 3,
+    "step_detailed": 10,
+    "img_filename": "10_mix.png",
+    "command_type": "stove_switchheat",
+    "command_details": "high",
+    "step_detailed_description": "Increase flame to high",
+    "step_description": "Increase flame to high, add rice and stir fry till well mixed"
+  },
+  {
+    "step_main": 3,
+    "step_detailed": 11,
+    "img_filename": "11_increase_to_high.png",
+    "command_type": "add_ingredient",
+    "command_details": "rice",
+    "step_detailed_description": "Add rice",
+    "step_description": "Increase flame to high, add rice and stir fry till well mixed"
+  },
+  {
+    "step_main": 3,
+    "step_detailed": 12,
+    "img_filename": "12_add_rice.png",
+    "command_type": "mix",
+    "command_details": "",
+    "step_detailed_description": "Sir fry until well mixed!",
+    "step_description": "Increase flame to high, add rice and stir fry till well mixed"
+  },
+  {
+    "step_main": 4,
+    "step_detailed": 13,
+    "img_filename": "13_mix.png",
+    "command_type": "add_ingredient",
+    "command_details": "light_soy_sauce",
+    "step_detailed_description": "Add light soy sauce",
+    "step_description": "Add soy sauces, water and sugar"
+  },
+  {
+    "step_main": 4,
+    "step_detailed": 14,
+    "img_filename": "14_lightsoysauce.png",
+    "command_type": "add_ingredient",
+    "command_details": "dark_soy_sauce",
+    "step_detailed_description": "Add dark soy sauce",
+    "step_description": "Add soy sauces, water and sugar"
+  },
+  {
+    "step_main": 4,
+    "step_detailed": 15,
+    "img_filename": "15_darksoysauce.png",
+    "command_type": "add_ingredient",
+    "command_details": "sugar",
+    "step_detailed_description": "Add sugar",
+    "step_description": "Add soy sauces, water and sugar"
+  },
+  {
+    "step_main": 5,
+    "step_detailed": 16,
+    "img_filename": "16_sugar.png",
+    "command_type": "add_ingredient",
+    "command_details": "scrambled_eggs",
+    "step_detailed_description": "Add scrambled eggs",
+    "step_description": "Add scrambled eggs"
+  },
+  {
+    "step_main": 6,
+    "step_detailed": 17,
+    "img_filename": "17_egg1.png",
+    "command_type": "mix",
+    "command_details": "",
+    "step_detailed_description": "Mix well!",
+    "step_description": "Mix well"
+  },
+  {
+    "step_main": 7,
+    "step_detailed": 18,
+    "img_filename": "18_mix.png",
+    "command_type": "add_ingredient",
+    "command_details": "spring_onion_green",
+    "step_detailed_description": "Add green spring onions",
+    "step_description": "Add green part of green onions and switch off flame"
+  },
+  {
+    "step_main": 7,
+    "step_detailed": 19,
+    "img_filename": "19_springonion.png",
+    "command_type": "stove_switchheat",
+    "command_details": "off",
+    "step_detailed_description": "Turn off flame",
+    "step_description": "Add green part of green onions and switch off flame"
+  },
+  {
+    "step_main": 8,
+    "step_detailed": 20,
+    "img_filename": "20_turnoffflame.png",
+    "command_type": "add_ingredient",
+    "command_details": "fried_egg",
+    "step_detailed_description": "Top it off with fried egg",
+    "step_description": "Add crispy fried egg"
+  },
+  {
+    "step_main": 9,
+    "step_detailed": 21,
+    "img_filename": "21_friedegg.png",
+    "command_type": "complete",
+    "command_details": "",
+    "step_detailed_description": "Done!",
+    "step_description": "Done!"
+  }
+]
