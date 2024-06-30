@@ -18,6 +18,8 @@
       "bundleIdentifier": "com.nus.nmbt"
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
+      "package": "nus.nbmt",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
