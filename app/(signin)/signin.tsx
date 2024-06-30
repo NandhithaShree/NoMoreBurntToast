@@ -92,7 +92,7 @@ const DisplayIcon = () => {
     <View style={styles.container}>
       <Image
         style={styles.tinyLogo}
-        source={require("../assets/images/logoig.png")}
+        source={require("../../assets/images/logoig.png")}
       />
     </View>
   );

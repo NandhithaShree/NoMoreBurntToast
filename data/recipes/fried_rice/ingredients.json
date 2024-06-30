@@ -1,0 +1,46 @@
+[
+  {
+    "id": "oil",
+    "name": "Oil"
+  },
+  {
+    "id": "garlic",
+    "name": "Garlic"
+  },
+  {
+    "id": "spring_onion_white",
+    "name": "White Spring Onion"
+  },
+  {
+    "id": "chili",
+    "name": "Chili"
+  },
+  {
+    "id": "rice",
+    "name": "Rice"
+  },
+  {
+    "id": "light_soy_sauce",
+    "name": "Light Soy Sauce"
+  },
+  {
+    "id": "dark_soy_sauce",
+    "name": "Dark Soy Sauce"
+  },
+  {
+    "id": "sugar",
+    "name": "Sugar"
+  },
+  {
+    "id": "scrambled_eggs",
+    "name": "Scrambled Eggs"
+  },
+  {
+    "id": "spring_onion_green",
+    "name": "Green Spring Onion"
+  },
+  {
+    "id": "fried_egg",
+    "name": "Fried Egg"
+  }
+]

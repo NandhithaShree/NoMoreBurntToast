@@ -10,7 +10,7 @@ import {
 import * as Font from "expo-font";
 import { useCallback, useState } from "react";
 import { Link } from "expo-router";
-import auth from "@react-native-firebase/auth";
+// import auth from "@react-native-firebase/auth";
 
 export default function SigninPage() {
   const [username, setusername] = useState("");
@@ -37,10 +37,10 @@ const Signin = () => {
 const DisplayIcon = () => {
   return (
     <View style={styles.container}>
-      { <Image
+      {/* { <Image
           style = {styles.tinyLogo}
-          /*source={require('../../assets/images/logoig.png')}*/
-        /> }
+          source={require('../../assets/images/logoig.png')}
+        /> } */}
     </View>
   );
 };
@@ -96,27 +96,28 @@ const SigninButton = ({
   username: string;
   password: string;
 }) => {
-  const signIn = useCallback(() => {
-    auth()
-      .createUserWithEmailAndPassword(username, password)
-      .then(() => {
-        console.log("User account created & signed in!");
-        alert("User account created & signed in!");
-      })
-      .catch((error) => {
-        if (error.code === "auth/email-already-in-use") {
-          console.log("That email address is already in use!");
-          alert("That email address is already in use!");
-        }
+  const signIn = () => {};
+  // const signIn = useCallback(() => {
+  //   auth()
+  //     .createUserWithEmailAndPassword(username, password)
+  //     .then(() => {
+  //       console.log("User account created & signed in!");
+  //       alert("User account created & signed in!");
+  //     })
+  //     .catch((error) => {
+  //       if (error.code === "auth/email-already-in-use") {
+  //         console.log("That email address is already in use!");
+  //         alert("That email address is already in use!");
+  //       }
 
-        if (error.code === "auth/invalid-email") {
-          console.log("That email address is invalid!");
-          alert("That email address is invalid!");
-        }
+  //       if (error.code === "auth/invalid-email") {
+  //         console.log("That email address is invalid!");
+  //         alert("That email address is invalid!");
+  //       }
 
-        console.error(error);
-      });
-  }, [username, password]);
+  //       console.error(error);
+  //     });
+  // }, [username, password]);
   return (
     <View style={{ width: 240, flex: 1, paddingLeft: 175 }}>
       <TouchableOpacity style={styles.button} onPress={signIn}>
