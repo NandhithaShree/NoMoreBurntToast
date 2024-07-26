@@ -319,6 +319,7 @@ export default function Page() {
                   margin: "auto",
                 }}
                 onPress={() => {
+                  //i want to change it here
                   navigation.dispatch({ type: "POP_TO_TOP" });
                 }}
               >
