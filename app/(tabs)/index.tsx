@@ -14,7 +14,7 @@ export default function Home() {
   const Page1Image = require('../../assets/images/Page 1 fried rice recipe.jpg');
   const Page2Image = require('../../assets/images/page 2 fried rice recipe.jpg');
   const [page, setPage] = useState(Page1Image);
-  var height = 450; //how do i change this variable
+  const[height, setheight] = useState(0);
 
   function handleClick() {
     if (page == Page1Image) {
@@ -23,6 +23,13 @@ export default function Home() {
     else {
       setPage(Page1Image)
     }
+  }
+
+  function showrecipe(){
+    if(height == 0){
+      setheight(450)
+    }
+    else{setheight(0)}
   }
 
 
@@ -64,11 +71,11 @@ export default function Home() {
       <View style={{
         flex: 0,
         marginTop: 20,
-        height: height,
+        height: 450,
       }}>
-        <Button title="fried rice recipe" color="black" ></Button>
+        <Button title="fried rice recipe" color="black" onPress={showrecipe}></Button>
         <View style={{
-          height: '100%',
+          height: height,
         }}>
           <Image source={page}
             style={{
