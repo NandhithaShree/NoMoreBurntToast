@@ -1,10 +1,24 @@
-import { Button, Image, Pressable, StyleSheet, Text, View } from "react-native";
-import { Link, Stack, router, useNavigation } from "expo-router";
+import {
+  Button,
+  Image,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+import {
+  Link,
+  Stack,
+  router,
+  useLocalSearchParams,
+  useNavigation,
+} from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
 import ingredients from "@/data/recipes/fried_rice/ingredients.json";
 import steps from "@/data/recipes/fried_rice/steps.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import imageMap from "./images";
 import Animated, {
@@ -21,10 +35,15 @@ import Toast from "react-native-toast-message";
 import MixButton from "./MixButton";
 
 export default function Page() {
+  // eg. /recipe/0/step/0?test=true
+  // get url params, if test=true set const testMode to true
+  const { test } = useLocalSearchParams();
+  const testMode = test === "true";
   const [stepDetailedIndex, setStepDetailedIndex] = useState(0);
   const [tab, setTab] = useState("ingredients");
   const [stoveAngle, setStoveAngle] = useState(0);
   const navigation = useNavigation();
+  const [mistakeCount, setMistakeCount] = useState(0);
 
   const nextStep = () => {
     if (stepDetailedIndex < steps.length - 1) {
@@ -38,13 +57,40 @@ export default function Page() {
     }
   };
 
+  const handleMistake = () => {
+    setMistakeCount(mistakeCount + 1);
+    Toast.show({
+      type: "error",
+      text1: "Incorrect!",
+      text2: `The correct step was ${step.step_detailed_description}`,
+    });
+    nextStep();
+  };
+
   const step = steps[stepDetailedIndex];
   const image = imageMap[step.step_detailed];
 
   console.log(image);
 
+  useEffect(() => {
+    // if on last step, navigate to localhost:8081/recipe/1/step/finish
+    if (stepDetailedIndex === steps.length - 1) {
+      console.log("navigating to finish");
+      if (testMode) {
+        const maxScore = steps.length;
+        const fullScore = steps.length - mistakeCount;
+        const percent = (fullScore / maxScore) * 100;
+        const roundedPercent = Math.round(percent);
+
+        router.replace("/recipe/1/step/finish?score=" + roundedPercent);
+      } else {
+        router.replace("/recipe/1/step/finish");
+      }
+    }
+  }, [stepDetailedIndex]);
+
   return (
-    <View
+    <ScrollView
     // style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
     >
       <Stack.Screen
@@ -81,7 +127,7 @@ export default function Page() {
               <Text style={{ fontWeight: 700 }}>
                 Step {stepDetailedIndex + 1}:{" "}
               </Text>
-              {step.step_detailed_description}
+              {testMode ? "???" : step.step_detailed_description}
             </Text>
           </View>
           <View style={{ flex: 0, flexDirection: "row" }}>
@@ -211,6 +257,10 @@ export default function Page() {
                       console.log("next step");
                       nextStep();
                     } else {
+                      if (testMode) {
+                        handleMistake();
+                        return;
+                      }
                       Toast.show({
                         type: "error",
                         text1: "Incorrect!",
@@ -253,6 +303,10 @@ export default function Page() {
                       console.log("next step");
                       nextStep();
                     } else {
+                      if (testMode) {
+                        handleMistake();
+                        return;
+                      }
                       Toast.show({
                         type: "error",
                         text1: "Incorrect!",
@@ -287,6 +341,10 @@ export default function Page() {
                   ) {
                     nextStep();
                   } else {
+                    if (testMode) {
+                      handleMistake();
+                      return;
+                    }
                     Toast.show({
                       type: "error",
                       text1: "Incorrect!",
@@ -340,7 +398,7 @@ export default function Page() {
 
       {/* Native modals have dark backgrounds on iOS, set the status bar to light content. */}
       <StatusBar style="light" />
-    </View>
+    </ScrollView>
   );
 }
 

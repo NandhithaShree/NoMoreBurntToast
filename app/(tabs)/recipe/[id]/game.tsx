@@ -1,5 +1,5 @@
 import { Link, Stack, useLocalSearchParams, useNavigation } from "expo-router";
-import { Button, Image, Pressable, Text, View } from "react-native";
+import { Button, Image, Pressable, ScrollView, Text, View } from "react-native";
 import { useEffect } from "react";
 
 import ingredients from "@/data/recipes/fried_rice/ingredients.json";
@@ -24,7 +24,7 @@ export default function Home() {
   }, [navigation]);
 
   return (
-    <View
+    <ScrollView
       style={{
         // flex: 1,
         // alignItems: "center",
@@ -122,8 +122,59 @@ export default function Home() {
           >
             Start Cooking!
           </Text>
+          <Text
+            style={{
+              color: "white",
+
+              fontWeight: 500,
+              fontSize: 16,
+            }}
+          >
+            Practice mode
+          </Text>
         </Pressable>
       </Link>
-    </View>
+      <Link
+        href={{
+          pathname: "recipe/[id]/step/[step]?test=true",
+          params: { id: 1, step: 1 },
+        }}
+        asChild
+      >
+        <Pressable
+          style={{
+            backgroundColor: "#25a547",
+            padding: 16,
+            borderRadius: 8,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            margin: "auto",
+            marginTop: 8,
+          }}
+        >
+          <Text
+            style={{
+              color: "white",
+
+              fontWeight: 700,
+              fontSize: 20,
+            }}
+          >
+            Test your skill!
+          </Text>
+          <Text
+            style={{
+              color: "white",
+
+              fontWeight: 500,
+              fontSize: 16,
+            }}
+          >
+            Test mode
+          </Text>
+        </Pressable>
+      </Link>
+    </ScrollView>
   );
 }

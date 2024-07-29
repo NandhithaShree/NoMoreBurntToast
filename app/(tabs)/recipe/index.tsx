@@ -32,7 +32,7 @@ export default function Home() {
         padding: 16,
       }}
     >
-      <Stack.Screen options={{ title: "Recipes" }} />
+      <Stack.Screen options={{ title: "Game" }} />
       <View
         style={{
           marginBottom: 16,

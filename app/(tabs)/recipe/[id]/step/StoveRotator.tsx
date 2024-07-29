@@ -70,6 +70,47 @@ export default function StoveRotator({
 
   return (
     <View style={{ zIndex: 99, margin: "auto" }}>
+      <View
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          marginTop: -20,
+        }}
+      >
+        <Button
+          title="Low"
+          onPress={() => {
+            setSetting("low");
+            setStoveAngle(0);
+            onRotate("low");
+          }}
+        />
+        <Button
+          title="Medium"
+          onPress={() => {
+            setSetting("medium");
+            setStoveAngle(Math.PI / 2);
+            onRotate("medium");
+          }}
+        />
+        <Button
+          title="High"
+          onPress={() => {
+            setSetting("high");
+            setStoveAngle(Math.PI);
+            onRotate("high");
+          }}
+        />
+        <Button
+          title="Off"
+          onPress={() => {
+            setSetting("off");
+            setStoveAngle(0);
+            onRotate("off");
+          }}
+        />
+      </View>
       <GestureDetector gesture={rotation}>
         <Animated.View
           style={[
@@ -99,6 +140,7 @@ export default function StoveRotator({
             {setting}
           </Text>
         </Animated.View>
+        {/* buttons to manually set the heat settings */}
       </GestureDetector>
     </View>
   );

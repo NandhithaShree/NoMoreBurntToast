@@ -7,23 +7,24 @@ export default function TabLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       {/* rest of the app */}
+
       <Tabs screenOptions={{ tabBarActiveTintColor: "blue" }}>
         <Tabs.Screen
           name="index"
           options={{
-            title: "Home",
+            title: "Recipes",
             tabBarIcon: ({ color }) => (
-              <FontAwesome size={28} name="home" color={color} />
+              <FontAwesome size={28} name="book" color={color} />
             ),
           }}
         />
         <Tabs.Screen
           name="recipe"
           options={{
-            title: "Recipes",
+            title: "Game",
 
             tabBarIcon: ({ color }) => (
-              <FontAwesome size={28} name="book" color={color} />
+              <FontAwesome size={28} name="gamepad" color={color} />
             ),
           }}
         />
