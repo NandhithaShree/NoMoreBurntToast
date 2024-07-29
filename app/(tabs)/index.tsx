@@ -80,7 +80,7 @@ export default function Home() {
           </Text>
           <Text
             style={{
-              fontSize: 64,
+              fontSize: 16,
               fontWeight: 700,
               textAlign: "center",
               lineHeight: 0,
