@@ -45,15 +45,17 @@ export default function Home() {
       >
         Congratulations! You have completed the recipe for {recipes[0].name}!
       </Text>
-      <Text
-        style={{
-          fontSize: 16,
-          marginBottom: 16,
-          textAlign: "center",
-        }}
-      >
-        You scored {score} out of 100. Great job!
-      </Text>
+      {score && (
+        <Text
+          style={{
+            fontSize: 16,
+            marginBottom: 16,
+            textAlign: "center",
+          }}
+        >
+          You scored {score} out of 100. Great job!
+        </Text>
+      )}
       <Image
         source={recipes[0].image}
         style={{ width: 180, height: 150, borderRadius: 8, margin: "auto" }}

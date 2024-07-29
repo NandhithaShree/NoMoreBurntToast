@@ -84,10 +84,10 @@ export default function Home() {
               fontWeight: 700,
               textAlign: "center",
               lineHeight: 0,
+              transform: height == 0 ? "rotate(0deg)" : "rotate(180deg)",
             }}
           >
-            {" "}
-            {height === 0 ? "🢓" : "🢑"}
+            ▼
           </Text>
         </TouchableOpacity>
         <View
