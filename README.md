@@ -7,13 +7,7 @@ A game app designed to teach realistic cooking recipes to both beginners and ent
 ### Cooking Tutorials
 
 - For both basic and intermediate cooking skills, no experience needed
-- Register as a user and save your progress, wherever you go
 - Practice and test your knowledge with our different modes
-
-### Safety First
-
-- Learn how to use different kitchen tools appropriately
-- Avoid harming yourself with safe knife skills
 
 ### Recipe Catalogue
 
@@ -30,7 +24,7 @@ For version control, we have decided to use one main Git branch for ease of deve
 
 ### Deployed development build
 
-Our chosen libraries do not support web builds, so the only fully working and debugged build is the iOS development build. Android development build is WIP.
+We have chosen Vercel to deploy our web builds for testing and prototyping. The iOS and Android builds have been discontinued in favor of this; however, there are no features that should not work on iOS or Android either, and the app builds should work.
 
 ### Running the project
 
@@ -51,4 +45,5 @@ In the output, you'll find options to open the app in a
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-<!-- - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo -->
+
+Our only officially supported platform is the web version, hosted on Vercel, but other platforms should theoretically work as well.

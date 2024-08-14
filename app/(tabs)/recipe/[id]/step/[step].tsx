@@ -130,45 +130,53 @@ export default function Page() {
               {testMode ? "???" : step.step_detailed_description}
             </Text>
           </View>
-          <View style={{ flex: 0, flexDirection: "row" }}>
-            <Pressable
-              style={{
-                backgroundColor: "white",
-                width: 24,
-                height: 24,
-                borderRadius: 16,
-                justifyContent: "center",
-                alignItems: "center",
-                opacity: stepDetailedIndex === 0 ? 0.5 : 1,
-                pointerEvents: stepDetailedIndex === 0 ? "none" : "auto",
-                marginRight: 8,
-              }}
-              onPress={prevStep}
+          {!testMode && (
+            <View
+              style={{ flexGrow: 0, flexBasis: "auto", flexDirection: "row" }}
             >
-              <Text style={{ fontSize: 16, color: "#13a570", fontWeight: 900 }}>
-                {"<"}
-              </Text>
-            </Pressable>
-            {/* next stpe */}
-            <Pressable
-              style={{
-                backgroundColor: "white",
-                width: 24,
-                height: 24,
-                borderRadius: 16,
-                justifyContent: "center",
-                alignItems: "center",
-                opacity: stepDetailedIndex === steps.length - 1 ? 0.5 : 1,
-                pointerEvents:
-                  stepDetailedIndex === steps.length - 1 ? "none" : "auto",
-              }}
-              onPress={nextStep}
-            >
-              <Text style={{ fontSize: 16, color: "#13a570", fontWeight: 900 }}>
-                {">"}
-              </Text>
-            </Pressable>
-          </View>
+              <Pressable
+                style={{
+                  backgroundColor: "white",
+                  width: 24,
+                  height: 24,
+                  borderRadius: 16,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  opacity: stepDetailedIndex === 0 ? 0.5 : 1,
+                  pointerEvents: stepDetailedIndex === 0 ? "none" : "auto",
+                  marginRight: 8,
+                }}
+                onPress={prevStep}
+              >
+                <Text
+                  style={{ fontSize: 16, color: "#13a570", fontWeight: 900 }}
+                >
+                  {"<"}
+                </Text>
+              </Pressable>
+              {/* next stpe */}
+              <Pressable
+                style={{
+                  backgroundColor: "white",
+                  width: 24,
+                  height: 24,
+                  borderRadius: 16,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  opacity: stepDetailedIndex === steps.length - 1 ? 0.5 : 1,
+                  pointerEvents:
+                    stepDetailedIndex === steps.length - 1 ? "none" : "auto",
+                }}
+                onPress={nextStep}
+              >
+                <Text
+                  style={{ fontSize: 16, color: "#13a570", fontWeight: 900 }}
+                >
+                  {">"}
+                </Text>
+              </Pressable>
+            </View>
+          )}
         </View>
         <View
           style={{
